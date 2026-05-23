@@ -9,8 +9,9 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ scrollToJobListings }) => (
   <section className="py-12 px-4 text-center bg-white-100">
     <h1 className="text-3xl sm:text-4xl font-bold mb-6">OUR CAREER</h1>
+
     <div className="flex flex-col items-center justify-center gap-8">
-      {/* Left Text Block - Eye Catching */}
+      {/* Left Text Block */}
       <div className="text-center max-w-2xl">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
           Join Our Team At <br />
@@ -18,9 +19,11 @@ const Hero: React.FC<HeroProps> = ({ scrollToJobListings }) => (
             RISK GUARD
           </span>
         </h2>
+
         <p className="text-lg sm:text-xl text-gray-700 mb-8 font-medium">
           Grow Your Career with Industry-Leading Opportunities
         </p>
+
         <button
           onClick={scrollToJobListings}
           className="bg-gradient-to-r from-[#1B3A57] to-[#0C1A30] text-white px-8 py-3 rounded-lg hover:shadow-lg transition transform hover:scale-105 font-semibold text-lg"
@@ -34,8 +37,6 @@ const Hero: React.FC<HeroProps> = ({ scrollToJobListings }) => (
 
 // Features Section
 const Features: React.FC = () => {
-
-
   return null;
 };
 
@@ -75,14 +76,16 @@ const JobListings = React.forwardRef<HTMLDivElement>((_, ref) => {
     },
   ];
 
+  // Apply Button Redirect
   const handleApplyClick = () => {
     window.location.href =
-      "https://docs.google.com/forms/d/e/1FAIpQLScGt4ufylZLhuY5BZIPwecqTZ9IuxmblXEW0B463PqZrOz-Zg/viewform?usp=dialog";
+      "https://docs.google.com/forms/d/e/1FAIpQLSdaD5-NJjfMVRlIfj34EF5UvuRGoF-b0LkuFe9T4d_Gkr2Xeg/viewform?usp=publish-editor";
   };
 
   return (
     <section ref={ref} className="py-16 px-4 bg-gray-50 text-center">
       <h2 className="text-2xl font-bold mb-8">Our Openings</h2>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {jobs.map((job, index) => (
           <div
@@ -94,13 +97,16 @@ const JobListings = React.forwardRef<HTMLDivElement>((_, ref) => {
               alt={job.title}
               className="rounded-md mb-4 h-36 object-cover mx-auto"
             />
+
             <div className="mb-2">
               <h3 className="text-lg font-semibold">{job.title}</h3>
               <p className="text-sm text-gray-600">{job.description}</p>
             </div>
+
             <span className="text-xs text-[#1B3A57] font-medium block mb-4">
               {job.remote ? "100% Remote" : "Onsite"}
             </span>
+
             <div className="flex justify-center">
               <button
                 onClick={handleApplyClick}
@@ -120,16 +126,18 @@ const JobListings = React.forwardRef<HTMLDivElement>((_, ref) => {
 const Resume: React.FC = () => {
   const handleRedirect = () => {
     window.location.href =
-      "https://docs.google.com/forms/d/e/1FAIpQLScQs8BGMcCm8c_dM0uQzM46s6Yihcva9bKWpqKJ6rv_D9ssqQ/viewform?usp=dialog";
+      "https://docs.google.com/forms/d/e/1FAIpQLSdaD5-NJjfMVRlIfj34EF5UvuRGoF-b0LkuFe9T4d_Gkr2Xeg/viewform?usp=publish-editor";
   };
 
   return (
     <section className="py-16 px-4 text-center bg-white">
       <h2 className="text-2xl font-bold mb-4">Didn't find your role?</h2>
+
       <p className="text-gray-600 mb-6">
         Upload your resume, and we'll contact you when a suitable role is
         available.
       </p>
+
       <button
         onClick={handleRedirect}
         className="bg-[#1B3A57] text-white px-6 py-2 rounded hover:bg-[#0C1A30] transition"
