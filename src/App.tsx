@@ -5,7 +5,7 @@ import Footer from './pages/footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import Blog from './pages/Blog';
+import Blog from './pages/Academics';
 import Career from './pages/Career';
 import Contact from './pages/Contact';
 import { ServiceDetail } from './components/ServiceDetail';
@@ -22,6 +22,7 @@ const App: React.FC = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/services/:id" element={<ServiceDetail />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/academics" element={<Blog />} />
             <Route path="/career" element={<Career />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

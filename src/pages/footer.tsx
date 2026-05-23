@@ -14,13 +14,13 @@ import type { IconType } from "react-icons";
 // Logos
 import msme_logo from "../assets/msme_logo.png";
 import dpiit1_logo from "../assets/DPIIT1_logo.png";
-import microsoft_startup_logo from "../assets/microsoft_startup_logo.jpg";
-import iso_logo from "../assets/iso_logo.jpg";
+import microsoft_startup_logo from "../assets/microsoft_startup_logo.png";
+import iso_logo from "../assets/iso_logo.png";
 
 // Reusable social icon link
 
 const SocialLink = ({ href, label, Icon }: { href: string; label: string; Icon: IconType }) => (
-  <a href={href} className="text-white hover:text-yellow-300 transition" aria-label={label}>
+  <a href={href} className="text-black hover:text-yellow-300 transition" aria-label={label}>
     <Icon size={16} />
   </a>
 );
@@ -39,9 +39,9 @@ const ContactRow = ({ href, text }: { href: string; text: string }) => (
 const Footer: React.FC = () => {
   const address = (
     <>
-      101, Metro Avenue, Plot No. 28 & 29,<br />
-      Calvary Temple Rd, IDPl Employees Colony,<br />
-      Hafeezpet, Hyderabad, Telangana 500049
+     101, Metro Avenue, Plot No. 28 & 29, Calvary Temple Rd, 
+     IDPl Employees Colony, Hafeezpet, 
+     Hyderabad, Telangana 500049
     </>
   );
 
@@ -60,9 +60,9 @@ const Footer: React.FC = () => {
 
   return (
     <div className="relative w-full">
-      <footer className="bg-[#EE4B2B] text-white pt-4 pb-2 sm:pt-6 sm:pb-3">
+      <footer className="bg-[	#eff8f9] text-blacks pt-4 pb-2 sm:pt-6 sm:pb-3">
         {/* Decorative top line */}
-        <div className="absolute top-0 left-0 w-full h-[8px] bg-[#EE4B2B]" />
+        <div className="absolute top-0 left-0 w-full h-[8px] bg-[	#eff8f9]" />
 
         <div className="relative z-1 w-[90%] mx-auto flex flex-col gap-3 mt-1">
           {/* Mobile View */}
@@ -108,7 +108,6 @@ const Footer: React.FC = () => {
 
           {/* Desktop View */}
           <div className="hidden md:grid grid-cols-3 gap-4">
-            {/* Left: Logos */}
             <div className="flex flex-col gap-6">
               <div className="flex gap-6">
                 <img src={msme_logo} alt="MSME" className="h-14" />
@@ -155,6 +154,7 @@ const Footer: React.FC = () => {
         </div>
       </footer>
     </div>
+    
   );
 };
 

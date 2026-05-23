@@ -17,7 +17,7 @@ export const ServiceDetail: React.FC = () => {
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Service not found</h2>
           <button
             onClick={() => navigate('/services')}
-            className="text-orange-500 hover:text-orange-600 inline-flex items-center"
+            className="text-[#1B3A57] hover:text-[#0C1A30] inline-flex items-center"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Services
@@ -33,7 +33,7 @@ export const ServiceDetail: React.FC = () => {
         {/* Back Navigation */}
         <Link
           to="/services"
-          className="inline-flex items-center text-orange-500 hover:text-orange-600 mb-8"
+          className="inline-flex items-center text-[#1B3A57] hover:text-[#0C1A30] mb-8"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Services
@@ -85,7 +85,7 @@ export const ServiceDetail: React.FC = () => {
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                   className="flex items-start"
                 >
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <span className="w-2 h-2 bg-[#1B3A57] rounded-full mt-2 mr-3 flex-shrink-0" />
                   <p className="text-gray-700">{strength}</p>
                 </motion.li>
               ))}
@@ -99,7 +99,7 @@ export const ServiceDetail: React.FC = () => {
             {service.process.map((step, index) => (
               <AnimatedCard key={index} delay={0.1 * index}>
                 <div className="flex items-center mb-4">
-                  <span className="w-8 h-8 bg-orange-500 rounded-full text-white flex items-center justify-center font-semibold mr-3">
+                  <span className="w-8 h-8 bg-[#1B3A57] rounded-full text-white flex items-center justify-center font-semibold mr-3">
                     {index + 1}
                   </span>
                   <h3 className="font-semibold text-gray-900">{step.title}</h3>
@@ -115,17 +115,17 @@ export const ServiceDetail: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
-          className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-8 text-white"
+          className="bg-gradient-to-r from-[#1B3A57] to-[#0C1A30] rounded-xl p-8 text-white"
         >
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-lg mb-8 text-orange-50">
+            <p className="text-lg mb-8 text-white">
               Contact our team to learn more about our {service.title.toLowerCase()} services
               and how we can help your business grow.
             </p>
             <Link
               to="/contact"
-              className="bg-white text-orange-500 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center"
+              className="bg-white text-[#1B3A57] px-8 py-3 rounded-lg font-semibold hover:bg-[#F0F9FF] transition-colors inline-flex items-center"
             >
               <Mail className="w-5 h-5 mr-2" />
               Contact Us Now

@@ -45,7 +45,7 @@
   left: 0;
   right: 0;
   height: 100%;
-  background: linear-gradient(to bottom, #FA9405, #E94822);
+  background: linear-gradient(to bottom, #1B3A57, #0C1A30);
   opacity: 0.9; /* Adjust opacity for subtle effect */
   z-index: 1;
   animation: gradient-fall 0.5s ease-in-out;
@@ -170,3 +170,4 @@
   animation: moveLeftToRight 1s ease-out;
   position: relative;
 }
+

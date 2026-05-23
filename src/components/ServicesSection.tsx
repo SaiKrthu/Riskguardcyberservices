@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import cyberSecurity from "../assets/cyber_security.svg";
-import businessConsulting from "../assets/B_D.svg";
-import grmc from "../assets/GRMC.svg";
-import skillDevelopment from "../assets/s_d.svg";
-import webDevelopment from "../assets/web_development.svg";
-import appDevelopment from "../assets/app.svg";
-import itConsulting from "../assets/it_c.svg";
-import techTraining from "../assets/tech_t.svg";
-import academicSupport from "../assets/APS.svg";
+import advisoryIcon from "../assets/GRMC.svg";
+import consultingIcon from "../assets/B_D.svg";
+import technologyIcon from "../assets/web_development.svg";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface Service {
@@ -19,99 +13,119 @@ interface Service {
 
 const categoryData = [
   {
-    key: "IT",
-    label: "IT Services",
-    logo: webDevelopment, // Customize per preference
+    key: "Advisory",
+    label: "Advisory",
+    logo: advisoryIcon,
   },
   {
-    key: "CyberSecurity",
-    label: "Cybersecurity Services",
-    logo: cyberSecurity,
+    key: "Consulting",
+    label: "Consulting",
+    logo: consultingIcon,
   },
   {
-    key: "BusinessDevelopment",
-    label: "Strategic Consulting",
-    logo: businessConsulting,
+    key: "Technology",
+    label: "Technology",
+    logo: technologyIcon,
   },
 ];
 
 const allServices: Service[] = [
+  // Advisory
   {
-    title: "Web Development",
-    description:
-      "Building responsive, custom websites with e-commerce, CMS, UI/UX, and optimization.",
-    image: webDevelopment,
+    title: "Governance, Risk & Compliance (GRC)",
+    description: "Managing risks, ensuring compliance, and developing policies for business security.",
+    image: advisoryIcon,
   },
   {
-    title: "App Development",
-    description:
-      "Creating high-performance mobile and desktop apps with seamless UI/UX and maintenance.",
-    image: appDevelopment,
+    title: "Third Party Risk Management (TPRM)",
+    description: "Assessing and managing risks from third-party vendors and partners.",
+    image: advisoryIcon,
   },
   {
-    title: "IT Consulting",
-    description:
-      "Strategic technology guidance for transformation, infrastructure, cloud, and IT optimization.",
-    image: itConsulting,
+    title: "Advisory Service Offerings",
+    description: "Comprehensive advisory services tailored to your business needs.",
+    image: advisoryIcon,
+  },
+
+  // Consulting
+  {
+    title: "Vulnerability Assessment & Penetration Testing (VAPT)",
+    description: "Identifying and addressing security vulnerabilities through expert testing.",
+    image: consultingIcon,
   },
   {
-    title: "Technology Trainings",
-    description:
-      "Upskilling teams with hands-on workshops, certifications, and the latest tech updates.",
-    image: techTraining,
+    title: "Security Operations Centre (SOC)",
+    description: "24/7 monitoring and response to security threats and incidents.",
+    image: consultingIcon,
   },
   {
-    title: "Academic Projects Support",
-    description:
-      "Expert guidance in planning, implementation, documentation, and quality assurance.",
-    image: academicSupport,
+    title: "Identity and Access Management (IAM)",
+    description: "Securing and managing digital identities and access rights.",
+    image: consultingIcon,
   },
   {
-    title: "Cyber Security",
-    description:
-      "Protecting your business with 24/7 monitoring, threat detection, audits, and encryption.",
-    image: cyberSecurity,
+    title: "Cloud Security",
+    description: "Protecting cloud environments and data from evolving threats.",
+    image: consultingIcon,
   },
   {
-    title: "Governance Risk Management & Compliance",
-    description:
-      "Managing risks, ensuring compliance, and developing policies for business security.",
-    image: grmc,
+    title: "Data Security and Privacy",
+    description: "Safeguarding sensitive data and ensuring privacy compliance.",
+    image: consultingIcon,
   },
   {
-    title: "Business Consulting",
-    description:
-      "Expert guidance for strategy, growth, process optimization, and performance improvement.",
-    image: businessConsulting,
+    title: "Digital Forensics & Incident Response (DFIR)",
+    description: "Investigating and responding to cyber incidents and breaches.",
+    image: consultingIcon,
+  },
+
+  // Technology
+  {
+    title: "AI & Automation in Cybersecurity",
+    description: "Leveraging AI and automation to enhance cybersecurity defenses.",
+    image: technologyIcon,
   },
   {
-    title: "Skill Development",
-    description:
-      "Empowering teams with training, leadership programs, workshops, and certifications.",
-    image: skillDevelopment,
+    title: "Web Automation & Security Testing",
+    description: "Automating web processes and testing for security vulnerabilities.",
+    image: technologyIcon,
+  },
+  {
+    title: "Security Platform Engineering",
+    description: "Building and optimizing security platforms for robust protection.",
+    image: technologyIcon,
+  },
+  {
+    title: "Emerging Technology Services",
+    description: "Adopting and securing the latest technology trends for your business.",
+    image: technologyIcon,
   },
 ];
 
 const categorizedServices: Record<string, Service[]> = {
-  IT: allServices.filter((s) =>
+  Advisory: allServices.filter((s) =>
     [
-      "Web Development",
-      "App Development",
-      "IT Consulting",
-      "Technology Trainings",
-      "Academic Projects Support",
+      "Governance, Risk & Compliance (GRC)",
+      "Third Party Risk Management (TPRM)",
+      "Advisory Service Offerings",
     ].includes(s.title)
   ),
-  CyberSecurity: allServices.filter((s) =>
-    ["Cyber Security", "Governance Risk Management & Compliance"].includes(
-      s.title
-    )
-  ),
-  BusinessDevelopment: allServices.filter((s) =>
+  Consulting: allServices.filter((s) =>
     [
-      "Business Consulting",
-      "Skill Development",
-      "Technology Trainings",
+      "Vulnerability Assessment & Penetration Testing (VAPT)",
+      "Security Operations Centre (SOC)",
+      "Identity and Access Management (IAM)",
+      "Cloud Security",
+      "Data Security and Privacy",
+      "Digital Forensics & Incident Response (DFIR)",
+    ].includes(s.title)
+  ),
+  Technology: allServices.filter((s) =>
+    [
+      "AI & Automation in Cybersecurity",
+      "Web Automation & Security Testing",
+      "Security Platform Engineering",
+      "Emerging Technology Services",
     ].includes(s.title)
   ),
 };
@@ -133,7 +147,7 @@ const ServicesSection: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-orange-400 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1B3A57] mb-4">
             Our Services
           </h2>
           <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-600 max-w-3xl mx-auto">
@@ -142,7 +156,7 @@ const ServicesSection: React.FC = () => {
         </motion.div>
 
         {/* Category Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 mb-12">
           {categoryData.map(({ key, label, logo }) => {
             const services = categorizedServices[key];
             return (
@@ -151,69 +165,65 @@ const ServicesSection: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ backgroundColor: "#f97316" }}
-                className="bg-white-400 rounded-2xl shadow p-4 flex flex-col items-center justify-center transition-colors duration-300 hover:text-white  font-medium w-full h-[310px] relative overflow-hidden"
+                whileHover={{ backgroundColor: "#1B3A57" }}
+                className="bg-white rounded-2xl shadow p-6 flex flex-col items-center justify-between transition-colors duration-300 hover:text-white font-medium w-full min-h-[370px] relative overflow-visible"
               >
                 {/* Logo and Title Block */}
-                <motion.div
-                  initial={false}
-                  animate={expanded === key ? { y: -140 } : { y: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className={`flex flex-col items-center justify-center text-center ${expanded === key ? "absolute top-4 left-0 right-0" : ""
-                    }`}
-                >
+                <div className="flex flex-col items-center justify-center text-center mb-2">
                   <img
                     src={logo}
                     alt={`${label} logo`}
-                    className="w-20 h-20 object-contain mb-4 "
+                    className="w-20 h-20 object-contain mb-4"
                   />
                   <h3 className="text-xl font-semibold">{label}</h3>
-                </motion.div>
+                </div>
 
                 {/* Expandable Service List */}
                 <AnimatePresence>
                   {expanded === key && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
+                      animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="absolute bottom-14 left-0 right-0 px-4"
+                      className="mt-4 w-full z-20"
                     >
-                      {services.map((service) => (
-                        <div
-                          key={service.title}
-                          className="flex gap-2 p-3 rounded-md items-center"
-                        >
-                          <img
-                            src={service.image}
-                            className="w-6 h-6 object-contain"
-                            alt={service.title}
-                          />
-                          <div className="font-semibold text-white-600">
-                            {service.title}
-                          </div>
-                        </div>
-                      ))}
+                      <ul className="space-y-3">
+                        {services.map((service) => (
+                          <li key={service.title} className="flex items-start gap-3 bg-[#f5f7fa] rounded-lg p-3 shadow-sm">
+                            <img
+                              src={service.image}
+                              className="w-7 h-7 object-contain mt-1"
+                              alt={service.title}
+                            />
+                            <div>
+                              <div className="font-semibold text-[#1B3A57] text-base">{service.title}</div>
+                              <div className="text-gray-600 text-sm leading-snug">{service.description}</div>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
                     </motion.div>
                   )}
                 </AnimatePresence>
 
                 {/* Toggle Button */}
-                <button
-                  onClick={() => toggleExpand(key)}
-                  className="absolute bottom-4 inline-flex items-center gap-2 font-medium transition"
-                >
-                  {expanded === key ? (
-                    <>
-                      Hide Services <ChevronUp className="w-4 h-6" />
-                    </>
-                  ) : (
-                    <>
-                      View More <ChevronDown className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
+                <div className="mt-6 flex justify-center w-full">
+                  <button
+                    onClick={() => toggleExpand(key)}
+                    className="inline-flex items-center gap-2 font-medium transition px-4 py-2 rounded-full border border-[#1B3A57] bg-white text-[#1B3A57] hover:bg-[#1B3A57] hover:text-white shadow"
+                  >
+                    {expanded === key ? (
+                      <>
+                        Hide Services <ChevronUp className="w-4 h-6" />
+                      </>
+                    ) : (
+                      <>
+                        View More <ChevronDown className="w-4 h-4" />
+                      </>
+                    )}
+                  </button>
+                </div>
               </motion.div>
             );
           })}
@@ -224,3 +234,4 @@ const ServicesSection: React.FC = () => {
 };
 
 export default ServicesSection;
+

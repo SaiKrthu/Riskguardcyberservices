@@ -6,42 +6,58 @@ import strategyIcon from "../assets/strategy.svg";
 import designIcon from "../assets/design.svg";
 import developIcon from "../assets/develop.svg";
 import supportIcon from "../assets/support.svg";
+import GRMCIcon from "../assets/GRMC.svg";
+import itcIcon from "../assets/it_c.svg";
 
 const ServiceFlowSection: React.FC = () => {
   // Development process steps
   const services = [
     {
       number: "01",
-      title: "Strategy",
+      title: "Certified Experts",
       description:
-        "We begin by thoroughly analyzing your business objectives and understanding end-user requirements. This helps us create a structured plan with low-fidelity wireframes, ensuring a clear roadmap for design and development.",
+        "Team of CISSP, CEH, OSCP, CISA, AWS Security Specialty, and GIAC certified professionals.",
       icon: strategyIcon,
     },
     {
       number: "02",
-      title: "Design",
+      title: "Proven Methodology",
       description:
-        "Our team carefully crafts the visual and functional aspects of your product. We focus on creating an intuitive user experience with a well-structured interface, ensuring a seamless blend of aesthetics and usability.",
+        "Structured, repeatable frameworks based on NIST, MITRE ATT&CK, OWASP, and ISO 27001.",
       icon: designIcon,
     },
     {
       number: "03",
-      title: "Develop",
+      title: "Industry Coverage",
       description:
-        "Using Agile methodology, we collaborate closely with stakeholders to refine and enhance the product. Continuous iterations allow us to build a robust, user-friendly platform that offers exceptional UI/UX functionality and performance.",
+        "Deep expertise in BFSI, Healthcare, Manufacturing, Government, Retail, and Technology sectors.",
       icon: developIcon,
     },
     {
       number: "04",
-      title: "Support",
+      title: "End-to-End Coverage",
       description:
-        "We provide ongoing maintenance and technical support to keep your website or application running smoothly. Our team actively monitors performance, resolves bugs, and implements new features to ensure long-term success.",
+        "From strategy and advisory to hands-on technical testing and 24x7 managed security services.",
+      icon: GRMCIcon,
+    },
+    {
+      number: "05",
+      title: "Compliance Ready",
+      description:
+        "Aligned to global and regional regulations — GDPR, HIPAA, PCI-DSS, CERT-In, RBI, SEBI.",
+      icon: itcIcon,
+    },
+    {
+      number: "06",
+      title: "AI-First Approach",
+      description:
+        "Leverage AI and automation to deliver faster detection, smarter analysis, and scalable operations.",
       icon: supportIcon,
     },
   ];
 
   return (
-    <section className="bg-[#FF6B3D] py-8 md:py-12 lg:py-16 w-full overflow-hidden">
+    <section className="bg-[#1B3A57] py-8 md:py-12 lg:py-16 w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <motion.h2
@@ -50,7 +66,7 @@ const ServiceFlowSection: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-xl md:text-3xl lg:text-4xl font-bold text-white uppercase text-center mb-12"
         >
-          Our Development Process
+          WHY CHOOSE RISK GUARD 
         </motion.h2>
 
         {/* Service Steps */}
@@ -73,7 +89,7 @@ const ServiceFlowSection: React.FC = () => {
                     <span className="text-6xl font-extrabold text-black opacity-20">
                       {service.number}
                     </span>
-                    <h3 className="text-2xl font-bold text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <h3 className="text-2xl font-bold text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full whitespace-nowrap">
                       {service.title}
                     </h3>
                   </div>
@@ -85,7 +101,7 @@ const ServiceFlowSection: React.FC = () => {
                     <motion.img
                       src={service.icon}
                       alt={service.title}
-                      className="w-12 h-12 rounded-full border-2 border-[#FF6B3D] p-2 flex-shrink-0"
+                      className="w-12 h-12 rounded-full border-2 border-[#1B3A57] p-2 flex-shrink-0"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 1 }}
                     />
@@ -110,9 +126,7 @@ const ServiceFlowSection: React.FC = () => {
                       {service.number}
                     </span>
                     <h3
-                      className={`text-3xl lg:text-4xl font-bold text-white absolute top-1/2 -translate-y-1/2 whitespace-nowrap ${
-                        isEven ? "md:left-20 lg:left-32" : "md:right-20 lg:right-32"
-                      }`}
+                      className="text-3xl lg:text-4xl font-bold text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full whitespace-nowrap text-center"
                     >
                       {service.title}
                     </h3>
@@ -132,7 +146,7 @@ const ServiceFlowSection: React.FC = () => {
                       <motion.img
                         src={service.icon}
                         alt={service.title}
-                        className="w-16 lg:w-20 h-16 lg:h-20 rounded-full border-2 border-[#FF6B3D] p-2 flex-shrink-0"
+                        className="w-16 lg:w-20 h-16 lg:h-20 rounded-full border-2 border-[#1B3A57] p-2 flex-shrink-0"
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 1 }}
                       />

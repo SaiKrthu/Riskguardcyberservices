@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
         {/* Animated Title */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
           <TypeAnimation
-            sequence={["RGESIndia", 1000, "RGESIndia"]}
+            sequence={["RISK GUARD", 1000, "RISK GUARD"]}
             speed={1}
             repeat={Infinity}
             cursor={false}
@@ -45,17 +45,13 @@ const HeroSection: React.FC = () => {
 
         {/* Description */}
         <p className="text-sm sm:text-base md:text-2xl max-w-xs sm:max-w-xl md:max-w-3xl leading-relaxed px-2 sm:px-0 text-justify sm:text-center">
-          RGESIndia is committed to driving innovation and excellence in
-          technology and education. Our mission is to empower future leaders
-          with the skills and knowledge needed to thrive in a rapidly evolving
-          digital world. We focus on fostering creativity, strategic thinking,
-          and a passion for continuous learning.
+          Risk Guard is dedicated to innovation in technology and education, empowering future leaders with the skills, creativity, and strategic thinking needed to succeed in a fast-changing digital era.
         </p>
 
         {/* Call-to-Action Button */}
         <button
           onClick={handleExploreClick}
-          className="mt-8 bg-orange-500 hover:bg-orange-600 text-lg font-semibold px-8 py-3 rounded-full transition-colors"
+          className="mt-8 bg-[#1B3A57] hover:bg-[#0C1A30] text-lg font-semibold px-8 py-3 rounded-full transition-colors"
         >
           Explore All Services
         </button>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Clock, Target, LineChart, Monitor, Timer, UserCog, Users } from 'lucide-react';
+import { Clock, LineChart, Monitor, Timer, UserCog, Users } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
-    <main className="bg-[#FBF5E5]">
+    <main className="bg-white">
 
       {/* About Us Section */}
       <section className="text-center py-16">
@@ -53,12 +53,11 @@ const About: React.FC = () => {
       {/* Why choose RiskGuard Section - icon features grid */}
       <section className="bg-black text-white py-16 px-4">
         <h2 className="text-3xl font-bold text-center mb-12">
-          Why choose <span className="text-[#FF4500]">Risk</span>Guard ?
+          What set us Apart
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-6xl mx-auto">
           {[
             { icon: Clock, label: 'Years Of Experience' },
-            { icon: Target, label: 'Fee That Suits Your Budget' },
             { icon: LineChart, label: 'Focus On Result' },
             { icon: Monitor, label: 'Customised Solutions' },
             { icon: Timer, label: '24x7 Access Available' },
@@ -67,7 +66,7 @@ const About: React.FC = () => {
           ].map(({ icon: Icon, label }, i) => (
             <div key={i} className="flex flex-col items-center text-center">
               <div className="bg-white p-4 rounded-full mb-4">
-                <Icon className="w-8 h-8 text-[#FF4500]" />
+                <Icon className="w-8 h-8 text-[#A2DFF7]" />
               </div>
               <p className="text-sm">{label}</p>
             </div>
@@ -75,24 +74,30 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Life at Risk Guard Section - office life images */}
-      <section className="py-16 px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Life at Risk Guard</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-          {[...Array(4)].map((_, i) => (
-            <div key={i} className="aspect-square overflow-hidden rounded-lg">
-              <img 
-                src={`/images/office-life-${i + 1}.jpg`}
-                alt={`Office life ${i + 1}`}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-          ))}
+      {/* Our Core Values Section (Short Version) */}
+      <section className="py-12 px-4 bg-gray-50">
+        <h2 className="text-2xl font-bold text-center mb-8">Our Core Values</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="flex flex-col items-center text-center">
+            <Clock className="w-8 h-8 text-[#1B3A57] mb-3" />
+            <h3 className="font-semibold text-base mb-1">Integrity</h3>
+            <p className="text-gray-600 text-sm">We act with honesty and fairness.</p>
+          </div>
+          <div className="flex flex-col items-center text-center">
+            <Users className="w-8 h-8 text-[#1B3A57] mb-3" />
+            <h3 className="font-semibold text-base mb-1">Collaboration</h3>
+            <p className="text-gray-600 text-sm">We believe in teamwork and partnership.</p>
+          </div>
+          <div className="flex flex-col items-center text-center">
+            <LineChart className="w-8 h-8 text-[#1B3A57] mb-3" />
+            <h3 className="font-semibold text-base mb-1">Excellence</h3>
+            <p className="text-gray-600 text-sm">We strive for the highest standards in all we do.</p>
+          </div>
         </div>
       </section>
-
     </main>
   );
 };
 
 export default About;
+

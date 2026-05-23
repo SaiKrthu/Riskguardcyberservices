@@ -20,14 +20,15 @@ const Contact: React.FC = () => {
   // Dropdown options
   const services = [
     "Web Development",
-    "Mobile App Development",
+   // "Mobile App Development",
     "Cyber Security",
     "Government Risk Management and compliance",
-    "Business Consulting",
-    "Skill Development",
-    "IT Consulting",
-    "Academic Project Support",
-    "Technological training"
+   // "Business Consulting",
+    //"Skill Development",
+   // "IT Consulting",
+   // "Academic Project Support",
+    //"Technological training"
+    "Others Services"
   ];
 
   // Handle form submission
@@ -57,7 +58,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fdf6e9] px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen bg-white px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold mb-4">CONTACT US</h1>
@@ -79,7 +80,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Right Form */}
-          <div className="md:w-1/2 p-6 sm:p-8 bg-gradient-to-b from-[#e84c24] to-[#f7941d]">
+          <div className="md:w-1/2 p-6 sm:p-8 bg-gradient-to-b from-[#1B3A57] to-[#A2DFF7]">
             {isSuccess ? (
               <SuccessMessage />
             ) : (
@@ -143,7 +144,7 @@ const Contact: React.FC = () => {
                 <div className="flex justify-center md:justify-start">
                   <button
                     type="submit"
-                    className="bg-white text-[#e84c24] px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+                    className="bg-white text-[#1B3A57] px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors"
                   >
                     SEND MESSAGE
                   </button>
@@ -159,16 +160,16 @@ const Contact: React.FC = () => {
 
       {/* Contact Info Cards */}
       <div className="mt-20">
-        <h2 className="text-4xl font-bold text-center mb-12">Get in Touch</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">Connect with our experts</h2>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <ContactCard
             icon={<Phone className="w-8 h-8" />}
-            title="Call Us"
+            title="Talk to our team"
             content={<a href="tel:+917032737700" className="hover:underline">+91 - 7032737700</a>}
           />
           <ContactCard
             icon={<Pencil className="w-8 h-8" />}
-            title="Write Us"
+            title="Submit your query"
             content={
               <>
                 <a href="mailto:founder@rgesindia.com" className="block hover:underline">
@@ -219,7 +220,7 @@ interface ContactCardProps {
 }
 
 const ContactCard: React.FC<ContactCardProps> = ({ icon, title, content }) => (
-  <div className="bg-gradient-to-b from-[#d86245] to-[#f7941d] rounded-2xl p-8 text-center text-white">
+  <div className="bg-gradient-to-b from-[#1B3A57] to-[#A2DFF7] rounded-2xl p-8 text-center text-white">
     <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
       {icon}
     </div>

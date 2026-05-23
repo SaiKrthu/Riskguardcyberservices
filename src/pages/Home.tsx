@@ -3,6 +3,8 @@ import HeroSection from '../components/HeroSection';
 import ServiceFlowSection from '../components/ServiceFlowSection';
 import ServicesSection from '../components/ServicesSection';
 import Partners from '../components/Partners';
+import AcademicPartners from '../components/AcademicPartners';
+import CommunityPartners from '../components/CommunityPartners';
 
 const Home: React.FC = () => {
   return (
@@ -24,21 +26,27 @@ const Home: React.FC = () => {
       {/* Service Flow Section */}
       <ServiceFlowSection />
 
+
       {/* Partners Section */}
       <Partners />
 
+      {/* Academic Partners Section */}
+      <AcademicPartners />
+
+      {/* Community Partners Section */}
+      <CommunityPartners />
+
       {/* Call to Action Section */}
       {/* Light background with vertical padding */}
-      <section className="bg-[#FBF5E5] py-20">
+      <section className="py-20">
         {/* Centered content with max width, padding */}
         <div className="max-w-4xl mx-auto text-center px-4">
           {/* Button styled link to contact page */}
           <a
             href="/contact"
-            className="inline-block bg-white text-[#FA9405] font-bold py-4 px-8 rounded-full text-lg 
-                       transition-transform hover:scale-105 hover:shadow-lg mb-8"
+            className="inline-block bg-[#1B3A57] text-white font-bold py-4 px-8 rounded-full text-lg transition-transform hover:scale-105 hover:shadow-lg mb-8"
           >
-            Get Started Today
+            Unlock Access Today
           </a>
         </div>
       </section>
@@ -48,3 +56,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+

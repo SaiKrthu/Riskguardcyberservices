@@ -7,18 +7,18 @@ interface HeroProps {
 
 // Hero Section
 const Hero: React.FC<HeroProps> = ({ scrollToJobListings }) => (
-  <section className="py-12 px-4 text-center bg-gray-100">
+  <section className="py-12 px-4 text-center bg-white-100">
     <h1 className="text-3xl sm:text-4xl font-bold mb-6">OUR CAREER</h1>
     <div className="flex flex-col md:flex-row items-center justify-center gap-8">
       {/* Left Text Block */}
       <div className="text-center md:text-left max-w-md">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
           Join Our Team At <br />
-          <span className="text-orange-500 font-bold">RISK GUARD</span>
+          <span className="text-[#1B3A57] font-bold">RISK GUARD</span>
         </h2>
         <button
           onClick={scrollToJobListings}
-          className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition"
+          className="bg-[#1B3A57] text-white px-6 py-2 rounded hover:bg-[#0C1A30] transition"
         >
           See Openings
         </button>
@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToJobListings }) => (
       {/* Right Image Block */}
       <div className="max-w-sm">
         <img
-          src="/images/risk3.jpeg"
+          src="dist/images/risk3.png"
           alt="Team Working"
           className="rounded-lg w-full"
         />
@@ -38,46 +38,9 @@ const Hero: React.FC<HeroProps> = ({ scrollToJobListings }) => (
 
 // Features Section
 const Features: React.FC = () => {
-  const featureList = [
-    "People Centricity",
-    "Back To Work",
-    "Work-Life Balance",
-    "Recognition & Rewards",
-    "Empowerment & Nurturing",
-  ];
 
-  return (
-    <section className="py-16 px-4 bg-white text-center">
-      <div className="max-w-3xl mx-auto mb-10">
-        <h2 className="text-2xl sm:text-3xl font-bold">
-          Your Life at <span className="text-orange-500">RISK GUARD</span>
-        </h2>
-        <h3 className="text-lg sm:text-xl mt-2 font-semibold">
-          JOIN US AND BUILD THE FUTURE
-        </h3>
-        <p className="mt-4 text-gray-600">
-          Ready to join? Our success comes from a passionate team, strong
-          relationships, and a commitment to positive impact.
-        </p>
-        <blockquote className="mt-4 italic font-medium">
-          "TOGETHER, WE TURN VISION INTO REALITY"
-        </blockquote>
-      </div>
 
-      {/* Feature Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-        {featureList.map((feature, index) => (
-          <div
-            key={index}
-            className="bg-gray-100 p-6 rounded-lg font-semibold shadow transition hover:bg-orange-500 hover:text-white"
-            tabIndex={0}
-          >
-            {feature}
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+  return null;
 };
 
 // Job Listings Section
@@ -139,13 +102,13 @@ const JobListings = React.forwardRef<HTMLDivElement>((_, ref) => {
               <h3 className="text-lg font-semibold">{job.title}</h3>
               <p className="text-sm text-gray-600">{job.description}</p>
             </div>
-            <span className="text-xs text-orange-500 font-medium block mb-4">
+            <span className="text-xs text-[#1B3A57] font-medium block mb-4">
               {job.remote ? "100% Remote" : "Onsite"}
             </span>
             <div className="flex justify-center">
               <button
                 onClick={handleApplyClick}
-                className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition"
+                className="bg-[#1B3A57] text-white px-4 py-2 rounded hover:bg-[#0C1A30] transition"
               >
                 Apply
               </button>
@@ -173,7 +136,7 @@ const Resume: React.FC = () => {
       </p>
       <button
         onClick={handleRedirect}
-        className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition"
+        className="bg-[#1B3A57] text-white px-6 py-2 rounded hover:bg-[#0C1A30] transition"
       >
         Upload Resume
       </button>

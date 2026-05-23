@@ -6,7 +6,7 @@
 //   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 //   return (
-//     <nav className="w-full bg-gradient-to-r from-yellow-100 via-orange-400 to-orange-600 sticky top-0 z-50 shadow-lg">
+//     <nav className="w-full bg-gradient-to-r from-[#0C1A30] via-[#1B3A57] to-[#FFFFFF] sticky top-0 z-50 shadow-lg">
 //       <div className="max-w-7xl mx-auto px-4 sm:px-8lg:px-10">
 //         <div className="flex items-center justify-between h-20">
 //           {/* Logo */}
@@ -37,8 +37,8 @@
 //             <Link to="/careers" className="text-black font-semibold hover:text-yellow-300 transition px-4 py-2 text-lg">
 //               Careers
 //             </Link>
-//             <Link to="/blog" className="text-black font-semibold hover:text-yellow-300 transition px-4 py-2 text-lg">
-//               Blog
+//             <Link to="/academics" className="text-black font-semibold hover:text-yellow-300 transition px-4 py-2 text-lg">
+//               Academics
 //             </Link>
 //           </div>
 
@@ -82,8 +82,8 @@
 //             <Link to="/careers" className="block text-black hover:text-yellow-400 px-3 py-2 text-base font-medium">
 //               Careers
 //             </Link>
-//             <Link to="/blog" className="block text-black hover:text-yellow-400 px-3 py-2 text-base font-medium">
-//               Blog
+//             <Link to="/academics" className="block text-black hover:text-yellow-400 px-3 py-2 text-base font-medium">
+//               Academics
 //             </Link>
 //           </div>
 //         </div>
@@ -93,3 +93,4 @@
 // };
 
 // export default Navbar;
+
