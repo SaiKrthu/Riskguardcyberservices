@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import ServiceFlowSection from '../components/ServiceFlowSection';
 import ServicesSection from '../components/ServicesSection';
@@ -42,12 +43,12 @@ const Home: React.FC = () => {
         {/* Centered content with max width, padding */}
         <div className="max-w-4xl mx-auto text-center px-4">
           {/* Button styled link to contact page */}
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-block bg-[#1B3A57] text-white font-bold py-4 px-8 rounded-full text-lg transition-transform hover:scale-105 hover:shadow-lg mb-8"
           >
             Unlock Access Today
-          </a>
+          </Link>
         </div>
       </section>
 
