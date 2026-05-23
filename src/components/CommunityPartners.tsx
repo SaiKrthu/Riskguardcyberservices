@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const CommunityPartners: React.FC = () => {
   const communityPartners = [
-    { href: " https://www.futuregpt.in/", src: "public/images/Futuregpt.png", alt: "Futuregpt" },
-    { href: "https://www.linkedin.com/showcase/cyberslay/", src: "public/images/Cyberslay.png", alt: "Cyberslay" },
-    { href: " https://www.ibsea.in/", src: "public/images/IBSEA.png", alt: "IBSEA" },
+    { href: " https://www.futuregpt.in/", src: "/images/Futuregpt.png", alt: "Futuregpt" },
+    { href: "https://www.linkedin.com/showcase/cyberslay/", src: "/images/cyberslay.png", alt: "Cyberslay" },
+    { href: " https://www.ibsea.in/", src: "/images/ibsea.png", alt: "IBSEA" },
   ];
 
   return (

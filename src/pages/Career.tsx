@@ -9,28 +9,24 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ scrollToJobListings }) => (
   <section className="py-12 px-4 text-center bg-white-100">
     <h1 className="text-3xl sm:text-4xl font-bold mb-6">OUR CAREER</h1>
-    <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-      {/* Left Text Block */}
-      <div className="text-center md:text-left max-w-md">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
+    <div className="flex flex-col items-center justify-center gap-8">
+      {/* Left Text Block - Eye Catching */}
+      <div className="text-center max-w-2xl">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
           Join Our Team At <br />
-          <span className="text-[#1B3A57] font-bold">RISK GUARD</span>
+          <span className="bg-gradient-to-r from-[#1B3A57] via-[#2D5A7B] to-[#1B3A57] bg-clip-text text-transparent animate-pulse">
+            RISK GUARD
+          </span>
         </h2>
+        <p className="text-lg sm:text-xl text-gray-700 mb-8 font-medium">
+          Grow Your Career with Industry-Leading Opportunities
+        </p>
         <button
           onClick={scrollToJobListings}
-          className="bg-[#1B3A57] text-white px-6 py-2 rounded hover:bg-[#0C1A30] transition"
+          className="bg-gradient-to-r from-[#1B3A57] to-[#0C1A30] text-white px-8 py-3 rounded-lg hover:shadow-lg transition transform hover:scale-105 font-semibold text-lg"
         >
           See Openings
         </button>
-      </div>
-
-      {/* Right Image Block */}
-      <div className="max-w-sm">
-        <img
-          src="dist/images/risk3.png"
-          alt="Team Working"
-          className="rounded-lg w-full"
-        />
       </div>
     </div>
   </section>
