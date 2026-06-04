@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
 // bg-gradient-to-r from-[#0C1A30] via-[#1B3A57] to-[#FFFFFF]
   return (
     <nav className="w-full bg-white sticky top-0 z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div >
@@ -34,10 +34,10 @@ const Navbar: React.FC = () => {
             <Link to="/career" className="text-[#0C1A30] font-semibold hover:text-blue-800 transition px-4 py-2 text-lg">
               Career
             </Link>
-            <Link to="/Academics" className="text-[#0C1A30] font-semibold hover:text-blue-800 transition px-4 py-2 text-lg">
+            <Link to="/academics" className="text-[#0C1A30] font-semibold hover:text-blue-800 transition px-4 py-2 text-lg">
               Academics
             </Link>
-            <Link to="/Contact" className="text-[#0C1A30] font-semibold hover:text-blue-800 transition px-4 py-2 text-lg">
+            <Link to="/contact" className="text-[#0C1A30] font-semibold hover:text-blue-800 transition px-4 py-2 text-lg">
               Contact
             </Link>
           </div>
@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
             <Link to="/career" className="block text-[#0C1A30] hover:text-blue-800 px-3 py-2 text-base font-medium">
               Career
             </Link>
-            <Link to="/Academics" className="block text-[#0C1A30] hover:text-blue-800 px-3 py-2 text-base font-medium">
+            <Link to="/academics" className="block text-[#0C1A30] hover:text-blue-800 px-3 py-2 text-base font-medium">
               Academics
             </Link>
           </div>

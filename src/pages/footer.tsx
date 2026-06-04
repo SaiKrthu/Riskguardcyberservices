@@ -54,8 +54,8 @@ const Footer: React.FC = () => {
 
   const contactDetails = [
     { href: "tel:7032737700", text: "+91 7032737700" },
-    { href: "mailto:founder@rgesindia.com", text: "founder@rgesindia.com" },
-    { href: "mailto:service@rgesindia.com", text: "service@rgesindia.com" },
+    { href: "mailto:founder@riskguardcyberservices.com", text: "founder@riskguardcyberservices.com" },
+    
   ];
 
   return (

@@ -19,21 +19,22 @@ const Contact: React.FC = () => {
 
   // Dropdown options
   const services = [
-    "Web Development",
-   // "Mobile App Development",
-    "Cyber Security",
-    "Government Risk Management and compliance",
-   // "Business Consulting",
-    //"Skill Development",
-   // "IT Consulting",
-   // "Academic Project Support",
-    //"Technological training"
-    "Others Services"
+    "Governance, Risk & Compliance (GRC)",
+    "Third Party Risk Management (TPRM)",
+    "Advisory Service Offerings",
+    "Vulnerability Assessment & Penetration Testing (VAPT)",
+    "Security Operations Center (SOC)",
+    "Identity and Access Management (IAM)",
+    "Cloud Security",
+    "Data Security and Privacy",
+    "Digital Forensics & Incident Response (DFIR)"
   ];
 
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const serviceEmail = 'founder@riskguardcyberservices.com';
 
     emailjs.send(
       'service_hsr6bdm', // EmailJS Service ID
@@ -41,9 +42,11 @@ const Contact: React.FC = () => {
       {
         from_name: formData.name,
         from_email: formData.email,
+        to_email: serviceEmail,
+        subject: 'New service request from RGES India website',
         phone: formData.phone,
         service: formData.service,
-        message: formData.message
+        message: formData.message,
       },
       '-rBRrQ6Xn_Hp05kiL' // EmailJS Public Key
     )
@@ -172,11 +175,8 @@ const Contact: React.FC = () => {
             title="Submit your query"
             content={
               <>
-                <a href="mailto:founder@rgesindia.com" className="block hover:underline">
-                  founder@rgesindia.com
-                </a>
-                <a href="mailto:service@rgesindia.com" className="block hover:underline">
-                  service@rgesindia.com
+                <a href="mailto:founder@riskguardcyberservices.com" className="block hover:underline">
+                  founder@riskguardcyberservices.com
                 </a>
               </>
             }

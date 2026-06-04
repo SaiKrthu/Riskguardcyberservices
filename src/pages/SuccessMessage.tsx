@@ -7,7 +7,7 @@ const SuccessMessage: React.FC = () => {
       <CheckCircle className="mx-auto mb-4 text-white" size={48} />
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Thank You!</h2>
       <p className="text-base sm:text-lg md:text-xl max-w-xl mx-auto">
-       Your service request has been successfully received, and we will contact you shortly to assist further..😊
+       Your service request has been successfully submitted. All details have been sent directly to <strong>founder@riskguardcyberservices.com</strong>, and our team will contact you shortly to assist further.
       </p>
     </div>
   );
