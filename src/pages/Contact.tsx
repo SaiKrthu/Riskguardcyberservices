@@ -37,8 +37,8 @@ const Contact: React.FC = () => {
     const serviceEmail = 'founder@riskguardcyberservices.com';
 
     emailjs.send(
-      'service_hsr6bdm', // EmailJS Service ID
-      'template_ziy6jaq', // EmailJS Template ID
+      'service_0o5jbkh', // EmailJS Service ID
+      'template_0h4rkho', // EmailJS Template ID
       {
         from_name: formData.name,
         from_email: formData.email,
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
         service: formData.service,
         message: formData.message,
       },
-      '-rBRrQ6Xn_Hp05kiL' // EmailJS Public Key
+      'XRvuhFak0z-vf5BKH' // EmailJS Public Key
     )
     .then(() => {
       setIsSuccess(true);
