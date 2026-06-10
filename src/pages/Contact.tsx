@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
         message: formData.message,
       },
       '-rBRrQ6Xn_Hp05kiL' // EmailJS Public Key
-    )
+    ) 
     .then(() => {
       setIsSuccess(true);
       setFormData({ name: '', phone: '', email: '', service: '', message: '' });
