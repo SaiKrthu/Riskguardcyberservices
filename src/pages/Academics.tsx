@@ -85,6 +85,29 @@ const Blog: React.FC = () => {
         >
           Professional Training Programs 
         </motion.h1>
+        <div className="bg-gradient-to-r from-[#1B3A57] to-[#2C5A82] rounded-3xl p-8 text-center text-white mb-16 shadow-xl">
+  <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+    Learning Management System (LMS)
+  </h2>
+
+  <p className="text-lg mb-6">
+    Access certification programs, online learning resources,
+    assessments, and training materials through our LMS platform.
+  </p>
+
+  <button
+    onClick={() => {
+      window.open(
+        "https://lms.sqctraining.com/",
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }}
+    className="bg-white text-[#1B3A57] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+  >
+    Access LMS Portal
+  </button>
+</div>
 
         {/* Timeline Container */}
         <div className="relative">
